@@ -6,10 +6,19 @@
     <title>WW2 Quiz</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
 </head>
 <body>
+
+    <button id = "startButton" onclick = "start(), run();">Start</button>
+
+    <span id = "showGame"  style = "display:none;">
+
     <h1>WW2 Quiz</h1>
+
+    <p><h2>Timer</h2>
+    <p id = "show-number"></p></p>
 
     <p id = "score"></p>
     
@@ -28,9 +37,9 @@
         <input type = "radio" id="mc" name = "question2" value = "georgKeppler">Georg Keppler<br>
         <p id = "question2Answer"></p>
         
-        <input id = "button" type = "button" value = "I'm finished" onclick = "check();"
-        
-
+        <!--<input id = "button" type = "button" value = "I'm finished" onclick = "check();" -->
+    
     </form>
+    </span>
 </body>
 </html>

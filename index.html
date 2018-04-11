@@ -14,9 +14,9 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-    <div class = "container">
-        <div class = "row">
-            <div class = "col-md-12 title">
+    <div class = "container-fluid header1">
+        <div class = "row headerImage">
+            <div class = "col-lg-12 title">
                 <p>WWII QUIZ</p>
             </div>
         </div>
@@ -25,41 +25,43 @@
     <container id = "startButtonDiv">
         <div class = "row startButtonRow">
             <div class = "col-md-12 startButtonCenter">
-            <button id = "startButton" onclick = "start(), run()">START</button>
+            <button id = "startButton" onclick = "start()">START</button>
             </div>
         </div>
     </container>
 </div>
 
+    <div class = "container questions">
+        <div class = "row">
+            <div class = "col-xs-12 col-md-12 col-sm-12">
     <div class = "game">
     <span id = "showGame"  style = "display:none">
-
-    <h1>WW2 Quiz</h1>
-
-        <p id = "show-number"> </p>
+        <div class = "timer">
+            <p id = "show-number"></p>
+        </div>
 
     <p id = "score"></p>
     
     <form id = "quiz" name = "quiz">
         <p>1. Where did Japan attack first?</p>
-        <input type = "radio" id="mc" name = "question1" value = "manchuria">Manchuria<br>
-        <input type = "radio" id="mc" name = "question1" value = "pearlHarbor">Pearl Harbor<br>
-        <input type = "radio" id="mc" name = "question1" value = "NewYorkCity">New York City<br>
-        <input type = "radio" id="mc" name = "question1" value = "seoul">Seoul<br>
+        <input type = "radio" id="ra" name = "question1" value = "manchuria">Manchuria<br>
+        <input type = "radio" id="wa" name = "question1" value = "pearlHarbor">Pearl Harbor<br>
+        <input type = "radio" id="wa" name = "question1" value = "NewYorkCity">New York City<br>
+        <input type = "radio" id="wa" name = "question1" value = "seoul">Seoul<br>
         <p id = "question1Answer"></p>
 
         <p>2. Who became leader of the Nazis and took over Germany?</p>
-        <input type = "radio" id="mc" name = "question2" value = "ottoBaum">Otto Baum<br>
-        <input type = "radio" id="mc" name = "question2" value = "adolfHitler">Adolf Hitler<br>
-        <input type = "radio" id="mc" name = "question2" value = "rudolfLehmann">Rudolf Lehmann<br>
-        <input type = "radio" id="mc" name = "question2" value = "georgKeppler">Georg Keppler<br>
+        <input type = "radio" id="wa" name = "question2" value = "ottoBaum">Otto Baum<br>
+        <input type = "radio" id="ra" name = "question2" value = "adolfHitler">Adolf Hitler<br>
+        <input type = "radio" id="wa" name = "question2" value = "rudolfLehmann">Rudolf Lehmann<br>
+        <input type = "radio" id="wa" name = "question2" value = "georgKeppler">Georg Keppler<br>
         <p id = "question2Answer"></p>
 
         <p>3. Who was the leader of the Communist Soviet Union at this time?</p>
-        <input type = "radio" id="mc" name = "question3" value = "georgyMalenkov">Georgy Malenkov<br>
-        <input type = "radio" id="mc" name = "question3" value = "vladimirLenin">Vladimir Lenin<br>
-        <input type = "radio" id="mc" name = "question3" value = "nikitaKhrushchev">Nikita Khrushchev<br>
-        <input type = "radio" id="mc" name = "question3" value = "josephStalin">Joseph Stalin<br>
+        <input type = "radio" id="wa" name = "question3" value = "georgyMalenkov">Georgy Malenkov<br>
+        <input type = "radio" id="wa" name = "question3" value = "vladimirLenin">Vladimir Lenin<br>
+        <input type = "radio" id="wa" name = "question3" value = "nikitaKhrushchev">Nikita Khrushchev<br>
+        <input type = "radio" id="ra" name = "question3" value = "josephStalin">Joseph Stalin<br>
         <p id = "question3Answer"></p>
 
         <p>4. Who became the dictator of Italy and joined a tight alliance with Germany?</p>
@@ -70,17 +72,17 @@
         <p id = "question4Answer"></p>
 
         <p>5. What American product was it hardest for citizens to have less of?</p>
-        <input type = "radio" id="mc" name = "question5" value = "water">Water<br>
-        <input type = "radio" id="mc" name = "question5" value = "oil">Oil<br>
-        <input type = "radio" id="mc" name = "question5" value = "iron">Iron<br>
-        <input type = "radio" id="mc" name = "question5" value = "gas">Gas<br>
+        <input type = "radio" id="wa" name = "question5" value = "water">Water<br>
+        <input type = "radio" id="wa" name = "question5" value = "oil">Oil<br>
+        <input type = "radio" id="wa" name = "question5" value = "iron">Iron<br>
+        <input type = "radio" id="ra" name = "question5" value = "gas">Gas<br>
         <p id = "question5Answer"></p>
 
         <p>6. What did Americans buy to help with war costs?</p>
-        <input type = "radio" id="mc" name = "question6" value = "automobiles">Automobiles<br>
-        <input type = "radio" id="mc" name = "question6" value = "stamps">Stamps<br>
-        <input type = "radio" id="mc" name = "question6" value = "warBonds">War Bonds<br>
-        <input type = "radio" id="mc" name = "question6" value = "water">Water<br>
+        <input type = "radio" id="wa" name = "question6" value = "automobiles">Automobiles<br>
+        <input type = "radio" id="wa" name = "question6" value = "stamps">Stamps<br>
+        <input type = "radio" id="ra" name = "question6" value = "warBonds">War Bonds<br>
+        <input type = "radio" id="wa" name = "question6" value = "water">Water<br>
         <p id = "question6Answer"></p>
 
         <p>7. Why was the Battle of Stalingrad a turning point in the war for the Allies?</p>
@@ -111,11 +113,15 @@
         <input type = "radio" id="mc" name = "question10" value = "franklinRoosevelt">Franklin Roosevelt<br>
         <p id = "question10Answer"></p>
 
+        <div class = "bottomButton">
         <button type="button" id = "doneButton">Done</button>
+        </div>
     </div>
-        
         <!--<input id = "button" type = "button" value = "I'm finished" onclick = "check();" -->
     </form>
+    </div>
+</div>
+</div>
     </span>
     <script src="assets/javascript/app.js"></script>
 </body>

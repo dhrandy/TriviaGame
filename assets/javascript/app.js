@@ -2,6 +2,8 @@
 function start() {
     document.getElementById('showGame').style.display = "block";
     document.getElementById('startButton').style.display = "none";
+    $("#show-number").html("<center><h2>Time Remaining:" + " " + number + "</h2></center>");
+    run();
 }
 
  //timer
@@ -27,7 +29,7 @@ function run() {
     number--;
 
     //  Show the number in the #show-number tag.
-    $("#show-number").html("<h2>Time Remaining" + " " + number + "</h2>");
+    $("#show-number").html("<center><h2>Time Remaining:" + " " + number + "</h2></center>");
 
     //  Once number hits zero...
     if (number === 0) {
@@ -41,7 +43,7 @@ function run() {
         var unanswered = 0;
         var correct = 0;
         var incorrect = 0;
-
+    
         var question1 = document.quiz.question1.value;
         var question2 = document.quiz.question2.value;
         var question3 = document.quiz.question3.value;
@@ -55,164 +57,139 @@ function run() {
         
         //html output
         var htmlCorrect = "Correct!";
-        var htmlQuestion1Answer = "<p>The correct Answer is Manchuria.</p>";
-        var htmlQuestion2Answer = "<p>The correct Answer is Adolf Hitler.</p>";
-        var htmlQuestion3Answer = "<p>The correct Answer is Joseph Stalin.</p>";
-        var htmlQuestion4Answer = "<p>The correct Answer is Benito Mussolini.</p>";
-        var htmlQuestion5Answer = "<p>The correct Answer is gas.</p>";
-        var htmlQuestion6Answer = "<p>The correct Answer is War Bonds</p>";
-        var htmlQuestion7Answer = "<p>The correct Answer is Germany retreated for the 1st time.</p>";
-        var htmlQuestion8Answer = "<p>The correct Answer is Hideki Tojo</p>";
-        var htmlQuestion9Answer = "<p>The correct Answer is Albert Einstein</p>";
-        var htmlQuestion10Answer = "<p>The correct Answer is Franklin Roosevelt</p>";
-    
+        var htmlQuestion1Answer = "<br><p>The correct Answer is Manchuria.</p><br>";
+        var htmlQuestion2Answer = "<br><p>The correct Answer is Adolf Hitler.</p><br>";
+        var htmlQuestion3Answer = "<br><p>The correct Answer is Joseph Stalin.</p><br>";
+        var htmlQuestion4Answer = "<br><p>The correct Answer is Benito Mussolini.</p><br>";
+        var htmlQuestion5Answer = "<br><p>The correct Answer is gas.</p><br>";
+        var htmlQuestion6Answer = "<br><p>The correct Answer is War Bonds</p><br>";
+        var htmlQuestion7Answer = "<br><p>The correct Answer is Germany retreated for the 1st time.</p><br>";
+        var htmlQuestion8Answer = "<br><p>The correct Answer is Hideki Tojo</p><br>";
+        var htmlQuestion9Answer = "<br><p>The correct Answer is Albert Einstein</p><br>";
+        var htmlQuestion10Answer = "<br><p>The correct Answer is Franklin Roosevelt</p><br>";
+
             //compares questions and answers
             if (question1 == "manchuria"){
                 correct++;
-                console.log("correct 1 = " + correct);
-                document.querySelector("#question1Answer").innerHTML = htmlCorrect;
-            }
-            else if (question1 == ("pearlHarbor" || "NewYorkCity" || "seol")) {
+            } else if (question1 !== "") {
                 incorrect++;
-                console.log("incorrect 1 = " + incorrect);
                 document.querySelector("#question1Answer").innerHTML = htmlQuestion1Answer;
-            } else {
+            } else if (question1 !== "manchuria"){
                 unanswered++;
+                document.querySelector("#question1Answer").innerHTML = htmlQuestion1Answer;
             }
 
             if (question2 == "adolfHitler"){
                 correct++;
-                console.log("correct 2 = " + correct);
                 document.querySelector("#question2Answer").innerHTML = htmlCorrect;
-            }
-            else if (question2 == ("ottoBaum" || "rudolfLehmann" || "georgKeppler")) {
+            } else if (question2 !== "") {
                 incorrect++;
-                console.log("incorrect 2 = "+incorrect);
                 document.querySelector("#question2Answer").innerHTML = htmlQuestion2Answer;
-            } else {
+            } else if (question2 !== "adolfHitler"){
                 unanswered++;
+                document.querySelector("#question2Answer").innerHTML = htmlQuestion2Answer;
             }
 
-            if (question3 == "Joseph Stalin"){
+            if (question3 == "josephStalin"){
                 correct++;
-                console.log("correct 3 = " + correct);
                 document.querySelector("#question3Answer").innerHTML = htmlCorrect;
             }
-            else if (question3 == ("georgyMalenkov" || "vladimirLenin" || "Nikita Khrushchev")) {
+            else if (question3 !== "") {
                 incorrect++;
-                console.log("incorrect 3 = "+incorrect);
                 document.querySelector("#question3Answer").innerHTML = htmlQuestion3Answer;
-            } else {
+            } else if (question3 !== "josephStalin"){
                 unanswered++;
+                document.querySelector("#question3Answer").innerHTML = htmlQuestion3Answer;
             }
 
             if (question4 == "benitoMussolini"){
                 correct++;
-                console.log("correct 4 = " + correct);
                 document.querySelector("#question4Answer").innerHTML = htmlCorrect;
             }
-            else if (question4 == ("antonioSalandra" || "luigiFacta" || "pietroBadoglio")) {
+            else if (question4 !== "") {
                 incorrect++;
-                console.log("incorrect 4 = "+incorrect);
                 document.querySelector("#question4Answer").innerHTML = htmlQuestion4Answer;
-            } else {
+            } else if (question4 !== "benitoMussolini") {
                 unanswered++;
+                document.querySelector("#question4Answer").innerHTML = htmlQuestion4Answer;
             }
             
             if (question5 == "gas"){
                 correct++;
-                console.log("correct 5 = " + correct);
                 document.querySelector("#question5Answer").innerHTML = htmlCorrect;
             }
-            else if (question5 == ("water" || "oil" || "iron")) {
+            else if (question5 !== "") {
                 incorrect++;
-                console.log("incorrect 5 = "+incorrect);
                 document.querySelector("#question5Answer").innerHTML = htmlQuestion5Answer;
-            } else {
+            } else if (question5 !== "gas") {
                 unanswered++;
+                document.querySelector("#question5Answer").innerHTML = htmlQuestion5Answer;
             }
 
             if (question6 == "warBonds"){
                 correct++;
-                console.log("correct 6 = " + correct);
                 document.querySelector("#question6Answer").innerHTML = htmlCorrect;
             }
-            else if (question6 == ("automobiles" || "stamps" || "water")) {
+            else if (question6 !== "") {
                 incorrect++;
-                console.log("incorrect 6 = "+incorrect);
                 document.querySelector("#question6Answer").innerHTML = htmlQuestion6Answer;
-            } else {
+            } else if (question6 !== "warBonds") {
                 unanswered++;
+                document.querySelector("#question6Answer").innerHTML = htmlQuestion6Answer;
             }
 
             if (question7 == "germanyRetreated"){
                 correct++;
-                console.log("correct 7 = " + correct);
                 document.querySelector("#question7Answer").innerHTML = htmlCorrect;
             }
-            else if (question7 == ("japanWas" || "italyRetreated" || "germanycouldnt")) {
+            else if (question7 !== "") {
                 incorrect++;
-                console.log("incorrect 7 = "+incorrect);
                 document.querySelector("#question7Answer").innerHTML = htmlQuestion7Answer;
-            } else {
+            } else if (question7 !== "germanyRetreated") {
                 unanswered++;
+                document.querySelector("#question7Answer").innerHTML = htmlQuestion7Answer;
             }
 
             if (question8 == "hidekiTojo"){
                 correct++;
-                console.log("correct 8 = " + correct);
                 document.querySelector("#question8Answer").innerHTML = htmlCorrect;
             }
-            else if (question8 == ("mitsumasaYonai" || "koisoKuniaki" || "kantaroSuzuki")) {
+            else if (question8 !== "") {
                 incorrect++;
-                console.log("incorrect 8 = "+incorrect);
                 document.querySelector("#question8Answer").innerHTML = htmlQuestion8Answer;
-            } else {
+            } else if (question8 !== "hidekiTojo") {
                 unanswered++;
+                document.querySelector("#question8Answer").innerHTML = htmlQuestion8Answer;
             }
 
             if (question9 == "albertEinstein"){
                 correct++;
-                console.log("correct 9 = " + correct);
                 document.querySelector("#question9Answer").innerHTML = htmlCorrect;
             }
-            else if (question9 == ("robertOppenhiemer" || "cliffordBerry" || "percySpencer")) {
+            else if (question9 !== "") {
                 incorrect++;
-                console.log("incorrect 9 = "+incorrect);
                 document.querySelector("#question9Answer").innerHTML = htmlQuestion9Answer;
-            } else {
+            } else if (question9 !== "albertEinstein") {
                 unanswered++;
+                document.querySelector("#question9Answer").innerHTML = htmlQuestion9Answer;
             }
 
             if (question10 == "franklinRoosevelt"){
                 correct++;
-                console.log("correct 10 = " + correct);
                 document.querySelector("#question10Answer").innerHTML = htmlCorrect;
             }
-            else if (question3 == ("harryTruman" || "herbertHoover" || "dwightEisenhower")) {
+            else if (question10 !== "") {
                 incorrect++;
-                console.log("incorrect 10 = "+incorrect);
                 document.querySelector("#question10Answer").innerHTML = htmlQuestion10Answer;
-            } else {
+            } else if (question10 !== "franklinRoosevelt") {
                 unanswered++;
+                document.querySelector("#question10Answer").innerHTML = htmlQuestion10Answer;
             }
         
     
-            var htmlScore = "<p>The correct Answer isCorrect Answers = " + correct + "<br>" +
+            var htmlScore = "<p>The correct answer = " + correct + "<br>" +
                         "Incorrect Answers = " + incorrect + "<br>" +
-                        "Unanswered Questions = " + unanswered + "</p>The correct Answer is";
+                        "Unanswered Questions = " + unanswered;
             document.querySelector("#score").innerHTML = htmlScore;
-    
-        console.log("total correct= "+correct);
-        console.log("total  incorrect= "+incorrect);
-
-        
-
-        
-        
-    
-
-
-
     }
   }

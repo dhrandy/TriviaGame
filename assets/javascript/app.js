@@ -62,7 +62,7 @@ function run() {
         var question10 = document.quiz.question10.value;
         
         //html output
-        var htmlCorrect = "Correct!";
+        var htmlCorrect = "<br>Correct!<br>";
         var htmlQuestion1Answer = "<br><p>The correct Answer is Manchuria.</p><br>";
         var htmlQuestion2Answer = "<br><p>The correct Answer is Adolf Hitler.</p><br>";
         var htmlQuestion3Answer = "<br><p>The correct Answer is Joseph Stalin.</p><br>";

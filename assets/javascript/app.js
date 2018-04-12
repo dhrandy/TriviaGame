@@ -77,6 +77,7 @@ function run() {
             //compares questions and answers
             if (question1 == "manchuria"){
                 correct++;
+                document.querySelector("#question1Answer").innerHTML = htmlCorrect;
             } else if (question1 !== "") {
                 incorrect++;
                 document.querySelector("#question1Answer").innerHTML = htmlQuestion1Answer;

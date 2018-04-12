@@ -62,17 +62,17 @@ function run() {
         var question10 = document.quiz.question10.value;
         
         //html output
-        var htmlCorrect = "<br>Correct!<br>";
-        var htmlQuestion1Answer = "<br><p>The correct Answer is Manchuria.</p><br>";
-        var htmlQuestion2Answer = "<br><p>The correct Answer is Adolf Hitler.</p><br>";
-        var htmlQuestion3Answer = "<br><p>The correct Answer is Joseph Stalin.</p><br>";
-        var htmlQuestion4Answer = "<br><p>The correct Answer is Benito Mussolini.</p><br>";
-        var htmlQuestion5Answer = "<br><p>The correct Answer is gas.</p><br>";
-        var htmlQuestion6Answer = "<br><p>The correct Answer is War Bonds</p><br>";
-        var htmlQuestion7Answer = "<br><p>The correct Answer is Germany retreated for the 1st time.</p><br>";
-        var htmlQuestion8Answer = "<br><p>The correct Answer is Hideki Tojo</p><br>";
-        var htmlQuestion9Answer = "<br><p>The correct Answer is Albert Einstein</p><br>";
-        var htmlQuestion10Answer = "<br><p>The correct Answer is Franklin Roosevelt</p><br>";
+        var htmlCorrect = "<br><strong>Correct!</strong><br>";
+        var htmlQuestion1Answer = "<br><p>The correct Answer is <strong>Manchuria</strong>.</p><br>";
+        var htmlQuestion2Answer = "<br><p>The correct Answer is <strong>Adolf Hitler</strong>.</p><br>";
+        var htmlQuestion3Answer = "<br><p>The correct Answer is <strong>Joseph Stalin</strong>.</p><br>";
+        var htmlQuestion4Answer = "<br><p>The correct Answer is <strong>Benito Mussolini</strong>.</p><br>";
+        var htmlQuestion5Answer = "<br><p>The correct Answer is <strong>gas</strong>.</p><br>";
+        var htmlQuestion6Answer = "<br><p>The correct Answer is <strong>War Bonds</strong>.</p><br>";
+        var htmlQuestion7Answer = "<br><p>The correct Answer is <strong>Germany retreated for the 1st time</strong>.</p><br>";
+        var htmlQuestion8Answer = "<br><p>The correct Answer is <strong>Hideki Tojo</strong></p>.<br>";
+        var htmlQuestion9Answer = "<br><p>The correct Answer is <strong>Albert Einstein</strong></p>.<br>";
+        var htmlQuestion10Answer = "<br><p>The correct Answer is <strong>Franklin Roosevelt</strong>.</p><br>";
 
             //compares questions and answers
             if (question1 == "manchuria"){
@@ -193,9 +193,9 @@ function run() {
             }
         
     
-            var htmlScore = "<p>The correct answer = " + correct + "<br>" +
-                        "Incorrect Answers = " + incorrect + "<br>" +
-                        "Unanswered Questions = " + unanswered;
+            var htmlScore = "<p>The correct answer = <strong>" + correct + "</strong><br>" +
+                        "Incorrect Answers = <strong>" + incorrect + "</strong><br>" +
+                        "Unanswered Questions = <strong>" + unanswered + "</strong>";
             document.querySelector("#score").innerHTML = htmlScore;
     }
   }

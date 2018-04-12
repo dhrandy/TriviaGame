@@ -46,6 +46,12 @@ button {
     
 }
 
+.timer {
+    color: red;
+    font-family: 'Allerta Stencil', sans-serif;
+    font-weight: 900;
+}
+
 .startButtonRow {
     height: 100hv;
 }

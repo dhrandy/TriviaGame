@@ -25,6 +25,12 @@ function run() {
         check();
 };
 
+/* $("#restartButton").click(function () {
+    $("#quiz")[0].reset();
+    return false;
+    document.getElementById("score").reset();
+  }); */
+
     //  Decrease number by one.
     number--;
 

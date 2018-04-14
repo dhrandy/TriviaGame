@@ -20,19 +20,17 @@
     background-size: cover;
 }
 
-#show-number {
-    line-height: 15px;
-}
-
 .startButtonCenter {
     text-align: center;
-    margin: 10px 0 10px 0;
-    width: 60%;
+    width: 100%;
     padding: 10px;
-    height: 100hv;
     font-size: 32px;
     font-family: 'Allerta Stencil', sans-serif;
     border: 8px; 
+}
+
+h2 {
+    font-weight: bold;
 }
 
 button {
@@ -41,15 +39,14 @@ button {
     font-weight: bold;
     color: white;
     background-color: #515836;
-    border-color:rgb(21, 43, 21);
-    
-    
+    border-color:rgb(21, 43, 21);   
 }
 
 .timer {
     color: red;
     font-family: 'Allerta Stencil', sans-serif;
-    font-weight: 900;
+    margin: 20px;
+    height: 30px;
 }
 
 .startButtonRow {
@@ -60,10 +57,7 @@ button {
     padding-bottom: 30px;
 }
 
-.timer {
-    margin: 20px;
-    height: 30px;
-}
+
 
 div:empty {
     height: 30px;
@@ -71,6 +65,7 @@ div:empty {
 
  .bottomButton {
     text-align: center;
+    margin-top: 35px;
  }
 
  footer {
@@ -78,6 +73,7 @@ div:empty {
      margin: 20px;
  }
  
+ /* media query for smaller screen */
  @media only screen and (max-width: 600px) {
  .title {
     text-align: center;
@@ -91,5 +87,17 @@ div:empty {
 .timer {
     margin-bottom: 50px;
     height: 30px;
+}
+
+#score {
+    margin-top: 65px;
+}
+
+.startButtonCenter {
+    text-align: center;
+    display: table;
+   margin: auto;
+    width: 100%;
+    font-size: 30px;
 }
 }

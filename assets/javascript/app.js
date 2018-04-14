@@ -7,7 +7,7 @@ function start() {
 }
 
  //timer
- var number = 30;
+ var number = 35;
  var intervalId;
 
 //countdown functions
@@ -25,12 +25,6 @@ function run() {
         check();
 };
 
-/* $("#restartButton").click(function () {
-    $("#quiz")[0].reset();
-    return false;
-    document.getElementById("score").reset();
-  }); */
-
     //  Decrease number by one.
     number--;
 
@@ -45,11 +39,13 @@ function run() {
       //  Alert the user that time is up.
     //alert("Time Up!");
 
-    function check () {
+        //runs the check answers function
+        function check () {
         var unanswered = 0;
         var correct = 0;
         var incorrect = 0;
     
+        //stores the selected answers into variables
         var question1 = document.quiz.question1.value;
         var question2 = document.quiz.question2.value;
         var question3 = document.quiz.question3.value;
@@ -61,7 +57,7 @@ function run() {
         var question9 = document.quiz.question9.value;
         var question10 = document.quiz.question10.value;
         
-        //html output
+        //html output for the correct answers
         var htmlCorrect = "<br><strong>Correct!</strong><br>";
         var htmlQuestion1Answer = "<br><p>The correct Answer is <strong>Manchuria</strong>.</p><br>";
         var htmlQuestion2Answer = "<br><p>The correct Answer is <strong>Adolf Hitler</strong>.</p><br>";
@@ -193,7 +189,7 @@ function run() {
                 document.querySelector("#question10Answer").innerHTML = htmlQuestion10Answer;
             }
         
-    
+            //displays the correct, incorrect, and unanswered questions.
             var htmlScore = "<p>The correct answer = <strong>" + correct + "</strong><br>" +
                         "Incorrect Answers = <strong>" + incorrect + "</strong><br>" +
                         "Unanswered Questions = <strong>" + unanswered + "</strong>";

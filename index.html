@@ -1,129 +1,113 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="utf-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>WW2 Quiz</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
-    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
-<link rel="stylesheet" type="text/css" media="screen" href="assets/css/style.css" />
+	<meta charset="utf-8">
+	<meta content="IE=edge" http-equiv="X-UA-Compatible">
+	<title>WW2 Quiz</title>
+	<meta content="width=device-width, initial-scale=1" name="viewport">
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js" type="text/javascript">
+	</script>
+	<link href="https://fonts.googleapis.com/css?family=Allerta+Stencil" rel="stylesheet">
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet">
+	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js">
+	</script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js">
+	</script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js">
+	</script>
+	<link href="assets/css/style.css" media="screen" rel="stylesheet" type="text/css">
 </head>
 <body>
-    <div class = "container-fluid header1">
-        <div class = "row headerImage">
-            <div class = "col-lg-12 title">
-                <p>WWII QUIZ</p>
-            </div>
-        </div>
-    </div>
-    <div class = "container">
-        <div class = "row startButtonRow">
-            <div class = "col-md-12 startButtonCenter">
-            <button id = "startButton" onclick = "start()">START</button>
-            </div>
-        </div>
-    </div>
-
-    <div class = "container questions">
-        <div class = "row">
-            <div class = "col-xs-12 col-md-12 col-sm-12">
-    <div class = "game">
-    <span id = "showGame"  style = "display:none">
-        <div class = "timer">
-            <p id = "show-number"></p>
-        </div>
-
-    <p id = "score"></p>
-    
-    <form id = "quiz" name = "quiz">
-        <p>1. Where did Japan attack first?</p>
-        <input type = "radio" id="ra" name = "question1" value = "manchuria">Manchuria<br>
-        <input type = "radio" id="wa" name = "question1" value = "pearlHarbor">Pearl Harbor<br>
-        <input type = "radio" id="wa" name = "question1" value = "NewYorkCity">New York City<br>
-        <input type = "radio" id="wa" name = "question1" value = "seoul">Seoul<br>
-        <p id = "question1Answer" class = "resetAnswer"></p>
-
-        <p>2. Who became leader of the Nazis and took over Germany?</p>
-        <input type = "radio" id="wa" name = "question2" value = "ottoBaum">Otto Baum<br>
-        <input type = "radio" id="ra" name = "question2" value = "adolfHitler">Adolf Hitler<br>
-        <input type = "radio" id="wa" name = "question2" value = "rudolfLehmann">Rudolf Lehmann<br>
-        <input type = "radio" id="wa" name = "question2" value = "georgKeppler">Georg Keppler<br>
-        <p id = "question2Answer" class = "resetAnswer"></p>
-
-        <p>3. Who was the leader of the Communist Soviet Union at this time?</p>
-        <input type = "radio" id="wa" name = "question3" value = "georgyMalenkov">Georgy Malenkov<br>
-        <input type = "radio" id="wa" name = "question3" value = "vladimirLenin">Vladimir Lenin<br>
-        <input type = "radio" id="wa" name = "question3" value = "nikitaKhrushchev">Nikita Khrushchev<br>
-        <input type = "radio" id="ra" name = "question3" value = "josephStalin">Joseph Stalin<br>
-        <p id = "question3Answer" class = "resetAnswer"></p>
-
-        <p>4. Who became the dictator of Italy and joined a tight alliance with Germany?</p>
-        <input type = "radio" id="mc" name = "question4" value = "benitoMussolini">Benito Mussolini<br>
-        <input type = "radio" id="mc" name = "question4" value = "antonioSalandra">Antonio Salandra<br>
-        <input type = "radio" id="mc" name = "question4" value = "luigiFacta">Luigi Facta<br>
-        <input type = "radio" id="mc" name = "question4" value = "pietroBadoglio">Pietro Badoglio<br>
-        <p id = "question4Answer" class = "resetAnswer"></p>
-
-        <p>5. What American product was it hardest for citizens to have less of?</p>
-        <input type = "radio" id="wa" name = "question5" value = "water">Water<br>
-        <input type = "radio" id="wa" name = "question5" value = "oil">Oil<br>
-        <input type = "radio" id="wa" name = "question5" value = "iron">Iron<br>
-        <input type = "radio" id="ra" name = "question5" value = "gas">Gas<br>
-        <p id = "question5Answer" class = "resetAnswer"></p>
-
-        <p>6. What did Americans buy to help with war costs?</p>
-        <input type = "radio" id="wa" name = "question6" value = "automobiles">Automobiles<br>
-        <input type = "radio" id="wa" name = "question6" value = "stamps">Stamps<br>
-        <input type = "radio" id="ra" name = "question6" value = "warBonds">War Bonds<br>
-        <input type = "radio" id="wa" name = "question6" value = "water">Water<br>
-        <p id = "question6Answer" class = "resetAnswer"></p>
-
-        <p>7. Why was the Battle of Stalingrad a turning point in the war for the Allies?</p>
-        <input type = "radio" id="mc" name = "question7" value = "japanWas">Japan was weakening.<br>
-        <input type = "radio" id="mc" name = "question7" value = "italyRetreated">Italy retreated for the 1st time.<br>
-        <input type = "radio" id="mc" name = "question7" value = "germanyRetreated">Germany retreated for the 1st time.<br>
-        <input type = "radio" id="mc" name = "question7" value = "germanycouldnt">Germany couldn't keep up weapons production.<br>
-        <p id = "question7Answer" class = "resetAnswer"></p>
-
-        <p>8. Who was the Japanese military general who took over Japan and helped Hitler during WWII</p>
-        <input type = "radio" id="mc" name = "question8" value = "hidekiTojo">Hideki Tojo<br>
-        <input type = "radio" id="mc" name = "question8" value = "mitsumasaYonai">Mitsumasa Yonai<br>
-        <input type = "radio" id="mc" name = "question8" value = "koisoKuniaki">Koiso Kuniaki<br>
-        <input type = "radio" id="mc" name = "question8" value = "kantaroSuzuki">Kantaro Suzuki<br>
-        <p id = "question8Answer" class = "resetAnswer"></p>
-
-        <p>9. Who warned the American government about using the atomic bombs in war? </p>
-        <input type = "radio" id="mc" name = "question9" value = "robertOppenhiemer">Robert Oppenhiemer<br>
-        <input type = "radio" id="mc" name = "question9" value = "albertEinstein">Albert Einstein<br>
-        <input type = "radio" id="mc" name = "question9" value = "cliffordBerry">Clifford Berry<br>
-        <input type = "radio" id="mc" name = "question9" value = "percySpencer">Percy Spencer<br>
-        <p id = "question9Answer" class = "resetAnswer"></p>
-
-        <p>10. Which President ordered the atomic bombs to be made?</p>
-        <input type = "radio" id="mc" name = "question10" value = "harryTruman">Harry Truman<br>
-        <input type = "radio" id="mc" name = "question10" value = "herbertHoover">Herbert Hoover<br>
-        <input type = "radio" id="mc" name = "question10" value = "dwightEisenhower">Dwight Eisenhower<br>
-        <input type = "radio" id="mc" name = "question10" value = "franklinRoosevelt">Franklin Roosevelt<br>
-        <p id = "question10Answer" class = "resetAnswer"></p>
-
-        <div class = "bottomButton">
-        <button type="button" id = "doneButton">Done</button><br><br>
-        <button id = "restartButton">Restart</button>
-        </div>
-    </form>
-    </div>
-    </div>
-        </div>
-            </div>
-    </span>
-    <footer>
-        Coded with HTML/CSS/JS by Randy Gentry
-    </footer>
-    <script src="assets/javascript/app.js"></script>
+	<div class="container-fluid header1">
+		<div class="row headerImage">
+			<div class="col-lg-12 title">
+				<p>WWII QUIZ</p>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row startButtonRow">
+			<div class="col-md-12 startButtonCenter">
+				<button id="startButton" onclick="start()">START</button>
+			</div>
+		</div>
+	</div>
+	<div class="container questions">
+		<div class="row">
+			<div class="col-xs-12 col-md-12 col-sm-12">
+				<div class="game">
+					<span id="showGame" style="display:none"></span>
+					<div class="timer">
+						<span id="showGame" style="display:none"></span>
+						<p id="show-number"><span id="showGame" style="display:none"></span></p>
+					</div>
+					<p id="score"><span id="showGame" style="display:none"></span></p>
+					<form id="quiz" name="quiz">
+						<span id="showGame" style="display:none"></span>
+						<p><span id="showGame" style="display:none">1. Where did Japan attack first?</span></p><span id="showGame" style="display:none"><input id="ra" name="question1" type="radio" value="manchuria">Manchuria<br>
+						<input id="wa" name="question1" type="radio" value="pearlHarbor">Pearl Harbor<br>
+						<input id="wa" name="question1" type="radio" value="NewYorkCity">New York City<br>
+						<input id="wa" name="question1" type="radio" value="seoul">Seoul<br></span>
+						<p class="resetAnswer" id="question1Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">2. Who became leader of the Nazis and took over Germany?</span></p><span id="showGame" style="display:none"><input id="wa" name="question2" type="radio" value="ottoBaum">Otto Baum<br>
+						<input id="ra" name="question2" type="radio" value="adolfHitler">Adolf Hitler<br>
+						<input id="wa" name="question2" type="radio" value="rudolfLehmann">Rudolf Lehmann<br>
+						<input id="wa" name="question2" type="radio" value="georgKeppler">Georg Keppler<br></span>
+						<p class="resetAnswer" id="question2Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">3. Who was the leader of the Communist Soviet Union at this time?</span></p><span id="showGame" style="display:none"><input id="wa" name="question3" type="radio" value="georgyMalenkov">Georgy Malenkov<br>
+						<input id="wa" name="question3" type="radio" value="vladimirLenin">Vladimir Lenin<br>
+						<input id="wa" name="question3" type="radio" value="nikitaKhrushchev">Nikita Khrushchev<br>
+						<input id="ra" name="question3" type="radio" value="josephStalin">Joseph Stalin<br></span>
+						<p class="resetAnswer" id="question3Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">4. Who became the dictator of Italy and joined a tight alliance with Germany?</span></p><span id="showGame" style="display:none"><input id="mc" name="question4" type="radio" value="benitoMussolini">Benito Mussolini<br>
+						<input id="mc" name="question4" type="radio" value="antonioSalandra">Antonio Salandra<br>
+						<input id="mc" name="question4" type="radio" value="luigiFacta">Luigi Facta<br>
+						<input id="mc" name="question4" type="radio" value="pietroBadoglio">Pietro Badoglio<br></span>
+						<p class="resetAnswer" id="question4Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">5. What American product was it hardest for citizens to have less of?</span></p><span id="showGame" style="display:none"><input id="wa" name="question5" type="radio" value="water">Water<br>
+						<input id="wa" name="question5" type="radio" value="oil">Oil<br>
+						<input id="wa" name="question5" type="radio" value="iron">Iron<br>
+						<input id="ra" name="question5" type="radio" value="gas">Gas<br></span>
+						<p class="resetAnswer" id="question5Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">6. What did Americans buy to help with war costs?</span></p><span id="showGame" style="display:none"><input id="wa" name="question6" type="radio" value="automobiles">Automobiles<br>
+						<input id="wa" name="question6" type="radio" value="stamps">Stamps<br>
+						<input id="ra" name="question6" type="radio" value="warBonds">War Bonds<br>
+						<input id="wa" name="question6" type="radio" value="water">Water<br></span>
+						<p class="resetAnswer" id="question6Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">7. Why was the Battle of Stalingrad a turning point in the war for the Allies?</span></p><span id="showGame" style="display:none"><input id="mc" name="question7" type="radio" value="japanWas">Japan was weakening.<br>
+						<input id="mc" name="question7" type="radio" value="italyRetreated">Italy retreated for the 1st time.<br>
+						<input id="mc" name="question7" type="radio" value="germanyRetreated">Germany retreated for the 1st time.<br>
+						<input id="mc" name="question7" type="radio" value="germanycouldnt">Germany couldn't keep up weapons production.<br></span>
+						<p class="resetAnswer" id="question7Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">8. Who was the Japanese military general who took over Japan and helped Hitler during WWII</span></p><span id="showGame" style="display:none"><input id="mc" name="question8" type="radio" value="hidekiTojo">Hideki Tojo<br>
+						<input id="mc" name="question8" type="radio" value="mitsumasaYonai">Mitsumasa Yonai<br>
+						<input id="mc" name="question8" type="radio" value="koisoKuniaki">Koiso Kuniaki<br>
+						<input id="mc" name="question8" type="radio" value="kantaroSuzuki">Kantaro Suzuki<br></span>
+						<p class="resetAnswer" id="question8Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">9. Who warned the American government about using the atomic bombs in war?</span></p><span id="showGame" style="display:none"><input id="mc" name="question9" type="radio" value="robertOppenhiemer">Robert Oppenhiemer<br>
+						<input id="mc" name="question9" type="radio" value="albertEinstein">Albert Einstein<br>
+						<input id="mc" name="question9" type="radio" value="cliffordBerry">Clifford Berry<br>
+						<input id="mc" name="question9" type="radio" value="percySpencer">Percy Spencer<br></span>
+						<p class="resetAnswer" id="question9Answer"><span id="showGame" style="display:none"></span></p>
+						<p><span id="showGame" style="display:none">10. Which President ordered the atomic bombs to be made?</span></p><span id="showGame" style="display:none"><input id="mc" name="question10" type="radio" value="harryTruman">Harry Truman<br>
+						<input id="mc" name="question10" type="radio" value="herbertHoover">Herbert Hoover<br>
+						<input id="mc" name="question10" type="radio" value="dwightEisenhower">Dwight Eisenhower<br>
+						<input id="mc" name="question10" type="radio" value="franklinRoosevelt">Franklin Roosevelt<br></span>
+						<p class="resetAnswer" id="question10Answer"><span id="showGame" style="display:none"></span></p>
+						<div class="bottomButton">
+							<span id="showGame" style="display:none"><button id="doneButton" type="button"><span id="showGame" style="display:none">Done</span><br>
+							<br>
+							<button id="restartButton">Restart</button></button></span>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+	<footer>
+		Coded with HTML/CSS/JS by Randy Gentry
+	</footer>
+	<script src="assets/javascript/app.js">
+	</script>
 </body>
 </html>

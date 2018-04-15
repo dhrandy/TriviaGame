@@ -1,7 +1,7 @@
 //start button
 function start() {
     document.getElementById('showGame').style.display = "block";
-    document.getElementById('startButton').style.display = "none";
+    document.getElementById('timerRow').style.display = "none";
     $("#show-number").html("<center><h2>Time Remaining:" + " " + number + "</h2></center>");
     run();
 }
@@ -64,8 +64,8 @@ function decrement() {
         var htmlQuestion5Answer = "<br><p>The correct Answer is <strong>gas</strong>.</p><br>";
         var htmlQuestion6Answer = "<br><p>The correct Answer is <strong>War Bonds</strong>.</p><br>";
         var htmlQuestion7Answer = "<br><p>The correct Answer is <strong>Germany retreated for the 1st time</strong>.</p><br>";
-        var htmlQuestion8Answer = "<br><p>The correct Answer is <strong>Hideki Tojo</strong></p>.<br>";
-        var htmlQuestion9Answer = "<br><p>The correct Answer is <strong>Albert Einstein</strong></p>.<br>";
+        var htmlQuestion8Answer = "<br><p>The correct Answer is <strong>Hideki Tojo</strong>.</p><br>";
+        var htmlQuestion9Answer = "<br><p>The correct Answer is <strong>Albert Einstein</strong>.</p><br>";
         var htmlQuestion10Answer = "<br><p>The correct Answer is <strong>Franklin Roosevelt</strong>.</p><br>";
 
         //compares questions and answers

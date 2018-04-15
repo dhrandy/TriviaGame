@@ -56,7 +56,7 @@ function decrement() {
         var question10 = document.quiz.question10.value;
 
         //html output for the correct answers
-        var htmlCorrect = "<br><strong>Correct!</strong><br>";
+        var htmlCorrect = "<br><p><strong>Correct!</strong></p><br>";
         var htmlQuestion1Answer = "<br><p>The correct Answer is <strong>Manchuria</strong>.</p><br>";
         var htmlQuestion2Answer = "<br><p>The correct Answer is <strong>Adolf Hitler</strong>.</p><br>";
         var htmlQuestion3Answer = "<br><p>The correct Answer is <strong>Joseph Stalin</strong>.</p><br>";

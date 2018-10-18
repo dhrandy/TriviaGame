@@ -2,7 +2,7 @@
 
 ## Description
 
-This is a build project for my coding bootcamp class with a timed quiz. It uses HTML, CSS, and JavaScript. You have to answer the quesiton before the time has expired, you have 35 seconds.
+This is a build project for my coding bootcamp class with a timed quiz. It uses HTML, CSS, and JavaScript. You have to answer the quesiton before the time has expired, you have 35 seconds.  My questions are WWII based.
 
 ## Instructions
 
